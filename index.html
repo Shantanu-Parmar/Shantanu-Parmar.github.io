@@ -38,47 +38,86 @@
 							.
 						</div>
 					</section>
-
+<style>
+			/* Basic dropdown styles */
+			ul.dropdown {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			ul.dropdown li {
+				cursor: pointer;
+				padding: 10px;
+				background-color: #f4f4f4;
+				border: 1px solid #ccc;
+				margin-bottom: 2px;
+			}
+			ul.dropdown li:hover {
+				background-color: #ddd;
+			}
+			ul.submenu {
+				display: none;
+				list-style-type: none;
+				padding-left: 20px;
+			}
+			ul.submenu li {
+				background-color: #fff;
+				padding: 8px;
+				border: 1px solid #eee;
+				margin-bottom: 2px;
+			}
+			ul.submenu li:hover {
+				background-color: #f9f9f9;
+			}
+		</style>
+		<script>
+			// Toggle the display of the submenu
+			function toggleSubmenu(id) {
+				var submenu = document.getElementById(id);
+				if (submenu.style.display === "none" || submenu.style.display === "") {
+					submenu.style.display = "block";
+				} else {
+					submenu.style.display = "none";
+				}
+			}
+		</script>
 				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Youtube</h2>
-									<p>Research Reviews, Presentations, Explainers</p>
-									<ul class="actions">
-										<li><a href="https://www.youtube.com/@explorare_infinitas" class="button">Learn more</a></li>
+				<section id="one" class="wrapper style2 spotlights">
+					<section>
+						<div class="content">
+							<div class="inner">
+								<h2>Education</h2>
+	
+								<ul class="dropdown">
+									<li onclick="toggleSubmenu('marwadi-university')">Marwadi University</li>
+									<ul id="marwadi-university" class="submenu">
+										<li><strong>Duration:</strong> September 2022 - May 2026</li>
+										<li><strong>Semester 1:</strong> Analog Electronics, Operational Amplifiers, Foundation in Sensor Interfacing, C Programming, Advance Calculus</li>
+										<li><strong>Semester 2:</strong> Digital Electronics and Digital Logic Design, Object-Oriented Programming and Core Java, CAD, Matrix and Vector Calculus</li>
+										<li><strong>Semester 3:</strong> Computer Organization and Architecture, Data Structures with C++, Communication Engineering, Python Programming, Discrete Mathematics and Graph Theory, Signals and Systems, Industry 4.0</li>
+										<li><strong>Semester 4:</strong> Microcontroller Interfacing, Web Development, Analog and Digital Communication, Operating Systems, Probability and Statistics, Database Management System</li>
+										<li><strong>Semester 5:</strong> Digital Signal and Image Processing, Algorithm Design, Computer Networks, </br><b>Electives:</b> Machine Learning, VLSI Design</li>
+										<li><strong>Semester 6:</strong> Optimization Technique, Software Engineering,Artificial Intelligence, Human Centered Design</br><b> Electives:</b> Computer Vision, Deep Learning</li>
 									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+	
+									<li onclick="toggleSubmenu('saint-pauls-school')">Saint Paul’s School, Munjka, Gujarat</li>
+									<ul id="saint-pauls-school" class="submenu">
+										<li><strong>Grade:</strong> 3 to 10</li>
+										<li><strong>Duration:</strong> June 2012 - March 2020</li>
+										<li><strong> Coursework:</strong> Mathematics, Sciences(Physics, Chemistry, Biology), Humanities(Moral Science, History & Civics, Geography),World Languages(English, French), Visual Art, Performing Art, Community Service, Computer Applications, and Programming, Laboratory sciences</li>
 									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+									<li onclick="toggleSubmenu('bh-rathod-high-school')">B.H. Rathod High School, Rajkot, Gujarat</li>
+									<ul id="bh-rathod-high-school" class="submenu">
+										<li><strong>Grade:</strong> 11 to 12</li>
+										<li><strong>Duration:</strong> May 2020 - May 2022</li>
+										<li><strong> Coursework:</strong> Pre-Calculus, Advanced Mathematics, Laboratory Sciences (Physics and Chemistry), World Languages(English), Web Development, Java Applications.</li>
 									</ul>
-								</div>
+								</ul>
 							</div>
-						</section>
+						</div>
 					</section>
-
+				</section>
+	
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
