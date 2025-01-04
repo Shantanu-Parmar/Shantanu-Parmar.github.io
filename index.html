@@ -600,6 +600,98 @@
 				</section>
 
 
+				<section id="hobbies" class="wrapper style3 fullscreen fade-up">
+					<div class="inner">
+						<h2>Hobbies</h2>
+						<div class="photo-grid" id="photoGrid"></div>
+					</div>
+					<style>
+						#hobbies {
+							padding: 20px;
+							background-color: #e3e3e3;
+							text-align: center;
+						}
+				
+						#hobbies h2 {
+							color: #333;
+							margin-bottom: 20px;
+						}
+				
+						.photo-grid {
+							display: grid;
+							grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+							grid-template-rows: repeat(2, 1fr); /* Fixed 2 rows */
+							gap: 15px; /* Spacing between photos */
+							justify-items: center;
+							align-items: center;
+							height: 400px; /* Adjust for consistent grid height */
+							overflow: hidden; /* Hide overflow during transitions */
+						}
+				
+						.photo-item {
+							width: 100%; /* Take full width of the grid cell */
+							height: 100%;
+							object-fit: cover; /* Ensures the photo maintains aspect ratio */
+							border-radius: 10px;
+							transition: opacity 1s ease-in-out;
+						}
+					</style>
+					<script>
+						const photoGrid = document.getElementById("photoGrid");
+						const images = [
+							"/images/road.jpg",
+							"/images/lake.jpg",
+							"/images/tele1.jpg",
+							"/images/meinwater.jpg",
+							"/images/museo.jpg",
+							"/images/meincanyon.jpg",
+							"/images/bike.jpg",
+							"/images/meinwild.jpg",
+							"/images/menearwater.jpg",
+							"/images/meonmountain.jpg",
+							"/images/menexttowater.jpg",
+							"/images/tele2.jpg",
+							"/images/end.jpg"
+						]; 
+				
+						const gridSize = 6; // Number of visible images (3x2 grid)
+				
+						// Shuffle the array (Fisher-Yates Shuffle)
+						function shuffleArray(array) {
+							for (let i = array.length - 1; i > 0; i--) {
+								const j = Math.floor(Math.random() * (i + 1));
+								[array[i], array[j]] = [array[j], array[i]];
+							}
+						}
+				
+						// Function to create and populate the grid
+						function populateGrid() {
+							photoGrid.innerHTML = ""; // Clear existing grid
+							const selectedImages = images.slice(0, gridSize); // Take the first six images
+							selectedImages.forEach((imgSrc) => {
+								const img = document.createElement("img");
+								img.src = imgSrc;
+								img.alt = "Hobby Photo";
+								img.className = "photo-item";
+								photoGrid.appendChild(img);
+							});
+						}
+				
+						// Auto-update the grid every 2 seconds
+						function updateGrid() {
+							shuffleArray(images); // Shuffle images before updating
+							populateGrid(); // Populate grid with shuffled images
+						}
+				
+						// Initialize the grid and set up the interval
+						shuffleArray(images); // Initial shuffle
+						populateGrid(); // Initial population
+						setInterval(updateGrid, 3000);
+					</script>
+				</section>
+				
+				
+
 				<section id="Contact" class="wrapper style1 fade-up">
 						<div class="inner">
 								<section>
