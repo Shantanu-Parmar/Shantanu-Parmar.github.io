@@ -16,12 +16,12 @@
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
 							<li><a href="#abt">About</a></li>
-							<li><a href="#one">Education</a></li>
+							<li><a href="#Education">Education</a></li>
 							<li><a href="#work">Work</a></li>
 							<li><a href="#four">Outreach</a></li>
 							<li><a href="#five">Associations</a></li>
 							<li><a href="#six">Hobbies</a></li>
-							<li><a href="#three">Get in touch</a></li>
+							<li><a href="#Contact">Get in touch</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -107,7 +107,7 @@
 
 
 
-			<section id="one" class="wrapper style2 spotlights">
+			<section id="Education" class="wrapper style2 spotlights">
 			<style>
 			/* Basic dropdown styles */
 			ul.dropdown {
@@ -203,53 +203,126 @@
 						</div>
 					</section>
 				</section>
-	
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+				<section id="work" class="wrapper style3 fullscreen fade-up">
+				<div class="inner">
+					<h2>Research</h2>
+					</div>
+						<div class="scroll-container" id="scrollContainer">
+						<style>
+							h2{
+								color: #041927;
+								font-weight: bold;
+								line-height: 1.5;
+								margin: 0 0 0.5em 0;
+							}
+							.scroll-container {
+								display: flex;
+								position: flex-start;
+								width: 100%;
+								overflow: hidden; /* Remove horizontal scrollbar */
+								justify-content: flex-start;
+								align-items: center;
+								gap: 40px; /* Gap between items */
+								padding: 0 20px;
+								color: #ffffff;
+							}
+							.scroll-item {
+								min-width: 250px;  /* Minimum width for items */
+								flex-shrink: 0; /* Prevent items from shrinking */
+								padding: 15px;
+								background-color: white;
+								box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+								border-radius: 10px;
+								text-align: center;
+								transition: transform 0.3s ease;
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+							}
+							.scroll-item img {
+								width: 350px;
+								height: auto;
+								border-radius: 10px;
+								margin-bottom: 10px;
+							}
+							.scroll-item p {
+								font-size: 16px;
+								color: #333;
+								margin: 10px 0;
+							}
+							.scroll-item a {
+								text-decoration: none;
+								color: #007bff;
+								font-weight: bold;
+							}
+							.scroll-item a:hover {
+								text-decoration: underline;
+							}
+							.arrow-button {
+								position: absolute;
+								color: rgba(163, 163, 163, 0.644);
+								cursor:default;
+								border-radius: 20%;
+								z-index: 3;
+							}
+							.arrow-button.right {
+								right: 1px;
+							}
+						</style>
+					<button class="arrow-button right" onclick="scrollRight()">→</button>
+						
+					<div class="scroll-item">
+						<img src="images/bkh.png" alt="GW">
+						<p>LIGO 03a run Noise transient Identification<br>using improved Random Forest</p>
+						<a href="" target="_blank">Reference</a>
+					</div>
+					<div class="scroll-item">
+						<img src="images/lidar.png" alt="Lidar">
+						<p>Utilizing Lidar Sensing to quantify the complexities <br>of Autonomous Driving Environments</p>
+						<a href="" target="_blank">Reference</a>
+					</div>
+					<div class="scroll-item">
+						<img src="images/vor.png" alt="Vor">
+						<p>Voronoi Tessellation based sensor deployment algorithm<br> for Forest Fire Early Detection</p>
+						<a href="" target="_blank">Reference</a>
+					</div>
+				</div>
+				<script>
+					const container = document.getElementById('scrollContainer');
+					const items = container.querySelectorAll('.scroll-item'); // Get all scroll items
+					let currentIndex = 0; // Track current index of displayed item
+			
+					const itemWidth = items[0].offsetWidth + 20; // width of one item including margin
+			
+					// Scroll left (to the previous item)
+					function scrollLeft() {
+						if (currentIndex === 0) {
+							currentIndex = items.length - 1; // Loop back to last item
+						} else {
+							currentIndex--; // Go to the previous item
+						}
+						container.scrollLeft = currentIndex * itemWidth;
+					}
+					// Scroll right (to the next item)
+					function scrollRight() {
+						if (currentIndex === items.length - 1) {
+							currentIndex = 0; // Loop back to first item
+						} else {
+							currentIndex++; // Go to the next item
+						}
+						container.scrollLeft = currentIndex * itemWidth;
+					}
+				</script>
+				</section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
+
+
+
+
+
+				
+					<section id="Contact" class="wrapper style1 fade-up">
 						<div class="inner">
 								<section>
 								<h2>Get in touch</h2>
