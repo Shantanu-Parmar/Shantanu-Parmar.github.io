@@ -15,8 +15,12 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#abt">About</a></li>
 							<li><a href="#one">Education</a></li>
-							<li><a href="#two">Work</a></li>
+							<li><a href="#work">Work</a></li>
+							<li><a href="#four">Outreach</a></li>
+							<li><a href="#five">Associations</a></li>
+							<li><a href="#six">Hobbies</a></li>
 							<li><a href="#three">Get in touch</a></li>
 						</ul>
 					</nav>
@@ -33,6 +37,77 @@
 							.
 						</div>
 					</section>
+
+
+					<section id="abt" class="wrapper style3 fade-up">
+						<style>
+							#abt {
+								display: flex;
+								justify-content: center; /* Centers the entire content horizontally */
+								padding: 20px; /* Adds space around the section */
+								box-sizing: border-box; /* Ensures padding is included in width/height */
+							}
+
+							#abt .inner {
+								display: flex;
+								align-items: center; /* Vertically centers items within the inner container */
+								justify-content: center; /* Centers items horizontally */
+								flex-wrap: wrap; /* Allows wrapping for responsiveness */
+								gap: 30px; /* Adds space between the image and text */
+								max-width: 1200px; /* Sets a maximum width for the inner container */
+								text-align: left; /* Aligns text to the left */
+							}
+
+							#abt .inner img {
+								height: 300px; /* Increases the size of the image */
+								width: 300px; /* Matches height for a circular shape */
+								border-radius: 50%; /* Makes the image circular */
+								object-fit: cover; /* Ensures the image aspect ratio is preserved */
+								flex-shrink: 0; /* Prevents the image from shrinking */
+							}
+
+							#abt .inner p {
+								flex: 1; /* Ensures the text takes up remaining space */
+								font-size: 1.2em; /* Increases text size for better readability */
+								line-height: 1.8; /* Improves line spacing */
+								margin: 0; /* Removes unnecessary margins */
+								text-align: center; /* Centers the text */
+							}
+
+
+																		
+							/* Ensure proper alignment for smaller screens */
+							@media (max-width: 768px) {
+								#abt .inner {
+									flex-direction: column; /* Stacks elements vertically on smaller screens */
+									text-align: center;
+								}
+					
+								#abt .inner img {
+									margin-bottom: 20px; /* Adds space below the image */
+								}
+							}
+						</style>
+					
+						<div class="inner">
+							<img src="images/me.jpg" alt="me" >
+							<div>
+								<h2><b>ABOUT</b></h2>
+								<p style="text-align: justify;">
+									My name is Shan, and I am an undergraduate Engineering student majoring in Information and Communication Technology 
+									(similar to ECE) for my Bachelor's in Technology. I am an American Physical Society Matching Membership Fellow 
+									and a member of the Inspired 24 Space Initiative. My primary research interests are in the amalgam of the fields 
+									of Astrophysics, Machine Learning, and VLSI. In my free time, I like to capture night sky photos, go on hikes, 
+									and build electronics projects.
+								</p>
+							</div>
+						</div>
+					</section>
+
+
+
+
+			<section id="one" class="wrapper style2 spotlights">
 			<style>
 			/* Basic dropdown styles */
 			ul.dropdown {
@@ -78,7 +153,7 @@
 				}
 			}
 		</script>
-				<section id="one" class="wrapper style2 spotlights">
+				
 					<section>
 						<div class="content">
 							<div class="inner">
@@ -129,6 +204,7 @@
 					</section>
 				</section>
 	
+
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
