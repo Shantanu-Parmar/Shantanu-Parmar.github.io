@@ -611,63 +611,63 @@
 							background-color: #e3e3e3;
 							text-align: center;
 						}
-				
+
 						#hobbies h2 {
 							color: #333;
 							margin-bottom: 20px;
 						}
-				
+
 						.photo-grid {
 							display: grid;
 							grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
 							grid-template-rows: repeat(2, 1fr); /* Fixed 2 rows */
 							gap: 15px; /* Spacing between photos */
 							justify-items: center;
-							align-items: center;
-							height: 400px; /* Adjust for consistent grid height */
-							overflow: hidden; /* Hide overflow during transitions */
+							align-items: stretch; /* Ensure items stretch fully in each cell */
+							height: auto; /* Allow height to adjust based on the content */
 						}
-				
+
 						.photo-item {
 							width: 100%; /* Take full width of the grid cell */
-							height: 100%;
-							object-fit: cover; /* Ensures the photo maintains aspect ratio */
+							height: 100%; /* Ensure height fits the grid cell */
+							object-fit: cover; /* Or use 'contain' if you want full images visible */
 							border-radius: 10px;
 							transition: opacity 1s ease-in-out;
 						}
+
 					</style>
 					<script>
 						const photoGrid = document.getElementById("photoGrid");
 						const images = [
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20241207-WA0007.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250115-WA0001.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0099.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0101.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0102.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0103.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0104.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0105.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0106.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0109.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0110.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0112.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0113.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0114.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0115.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0116.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/bike-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/end-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/lake-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meincanyon-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwater-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwild-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menearwater-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menexttowater-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/museo-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/road-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele1-min.jpg",
-    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele2-min.jpg"
-];
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20241207-WA0007.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250115-WA0001.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0099.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0101.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0102.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0103.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0104.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0105.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0106.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0109.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0110.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0112.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0113.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0114.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0115.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0116.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/bike-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/end-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/lake-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meincanyon-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwater-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwild-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menearwater-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menexttowater-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/museo-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/road-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele1-min.jpg",
+							"https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele2-min.jpg"
+						];
 
 						
 				
