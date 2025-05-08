@@ -277,10 +277,7 @@
 								right: 1px;
 							}
 						</style>
-					<script>
-  						const video = document.querySelector('.scroll-item video');
-  						video.playbackRate = 0.50; // 0.5 = half speed, 1 = normal, 2 = double speed
-					</script>
+					
 					<button class="arrow-button right" onclick="scrollRight()">→</button>
 					<div class="scroll-item">
 					<video
@@ -290,6 +287,10 @@
 					    muted
 					    playsinline>	
 					</video>
+					<script>
+  						const video = document.querySelector('.scroll-item video');
+  						video.playbackRate = 0.50; // 0.5 = half speed, 1 = normal, 2 = double speed
+					</script>
 					  <p>Deep Learning based vision powered<br>Celestial object tracking on<br>MobilTelesco Dataset</p>
 					  <a href="https://shantanu909.github.io/MBTrdemo/" target="_blank">Reference</a>
 					</div>
