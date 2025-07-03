@@ -524,113 +524,133 @@
 				</section>
 
 
+<section id="associations" class="wrapper style3 fullscreen fade-up">
+  <div class="inner">
+    <h2>Associations</h2>
+    <div class="logo-grid">
+      <div class="logo-item">
+        <div class="logo-img-wrapper">
+          <a href="https://www.aps.org/" target="_blank">
+            <img src="images/aps.svg" alt="APS Logo" />
+          </a>
+        </div>
+        <p><b>Matching Membership Fellow<br>American Physical Society</b></p>
+      </div>
 
-				<section id="associations" class="wrapper style3 fullscreen fade-up">
-				  <div class="inner">
-				    <h2>Associations</h2>
-				    <div class="logo-grid">
-				      <div class="logo-item">
-				        <a href="https://www.aps.org/" target="_blank">
-				          <img src="images/aps.svg" alt="APS Logo" />
-				        </a>
-				        <p><b>Matching Membership Fellow<br>American Physical Society</b></p>
-				      </div>
-				
-				      <div class="logo-item">
-				        <a href="https://www.lisamission.org/" target="_blank">
-				          <img src="images/lisa.png" alt="LISA Logo" />
-				        </a>
-				        <p><b>Community Member<br>The Laser Interferometer Space Antenna</b></p>
-				      </div>
-				
-				      <div class="logo-item">
-				        <a href="https://theinspired24.com/" target="_blank">
-				          <img src="images/i24.png" alt="Inspired24 Logo" />
-				        </a>
-				        <p><b>Member<br>Inspired24: Space 4 all</b></p>
-				      </div>
-				
-				      <div class="logo-item">
-				        <a href="https://science.nasa.gov/astrophysics/programs/habitable-worlds-observatory/" target="_blank">
-				          <img src="images/hwo.png" alt="HWO Logo" />
-				        </a>
-				        <p><b>Member<br>Dark Matter Sub Working Group </b></p>
-				      </div>
-				    </div>
-				  </div>
-				
-				  <style>
-				    #associations {
-				      padding: 40px;
-				      background-color: #a3a3a3;
-				      color: #333;
-				      text-align: center;
-				    }
-				
-				    .logo-grid {
-				      display: flex;
-				      justify-content: space-between;
-				      align-items: stretch; /* All items equal height */
-				      flex-wrap: nowrap;
-				      gap: 20px;
-				    }
-				
-				    .logo-item {
-				      flex: 1 1 0;
-				      min-width: 100px;
-				      max-width: 25%;
-				      display: flex;
-				      flex-direction: column;
-				      justify-content: space-between;
-				      align-items: center;
-				      padding: 10px;
-				      background-color: transparent;
-				    }
-				
-				    .logo-item img {
-				      width: 100%;
-				      max-width: 150px;
-				      height: auto;
-				      transition: transform 0.3s ease;
-				      cursor: pointer;
-				    }
-				
-				    .logo-item img:hover {
-				      transform: scale(1.1);
-				    }
-				
-				    .logo-item p {
-				      font-size: 14px;
-				      color: #fff;
-				      margin-top: 10px;
-				    }
-				
-				    @media (max-width: 768px) {
-				      .logo-grid {
-				        flex-wrap: wrap;
-				        justify-content: center;
-				      }
-				
-				      .logo-item {
-				        max-width: 50%;
-				      }
-				
-				      .logo-item img {
-				        max-width: 120px;
-				      }
-				    }
-				
-				    @media (max-width: 480px) {
-				      .logo-item {
-				        max-width: 100%;
-				      }
-				
-				      .logo-item img {
-				        max-width: 100px;
-				      }
-				    }
-				  </style>
-				</section>
+      <div class="logo-item">
+        <div class="logo-img-wrapper">
+          <a href="https://www.lisamission.org/" target="_blank">
+            <img src="images/lisa.png" alt="LISA Logo" />
+          </a>
+        </div>
+        <p><b>Community Member<br>The Laser Interferometer Space Antenna</b></p>
+      </div>
+
+      <div class="logo-item">
+        <div class="logo-img-wrapper">
+          <a href="https://theinspired24.com/" target="_blank">
+            <img src="images/i24.png" alt="Inspired24 Logo" />
+          </a>
+        </div>
+        <p><b>Member<br>Inspired24: Space 4 all</b></p>
+      </div>
+
+      <div class="logo-item">
+        <div class="logo-img-wrapper">
+          <a href="https://science.nasa.gov/astrophysics/programs/habitable-worlds-observatory/" target="_blank">
+            <img src="images/hwo.png" alt="HWO Logo" />
+          </a>
+        </div>
+        <p><b>Member<br>Dark Matter Sub Working Group</b></p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #associations {
+      padding: 40px;
+      background-color: #a3a3a3;
+      color: #333;
+      text-align: center;
+    }
+
+    .logo-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      flex-wrap: nowrap;
+    }
+
+    .logo-item {
+      flex: 1 1 0;
+      max-width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo-img-wrapper {
+      height: 120px; /* Fixed height for logo container */
+      display: flex;
+      align-items: flex-end; /* Align all logos to bottom */
+      justify-content: center;
+      width: 100%;
+    }
+
+    .logo-item img {
+      max-height: 100%;
+      max-width: 100%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .logo-item img:hover {
+      transform: scale(1.1);
+    }
+
+    .logo-item p {
+      font-size: 14px;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .logo-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo-item {
+        max-width: 45%;
+        margin-bottom: 20px;
+      }
+
+      .logo-img-wrapper {
+        height: 100px;
+      }
+
+      .logo-item img {
+        max-height: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-item {
+        max-width: 100%;
+      }
+
+      .logo-img-wrapper {
+        height: 80px;
+      }
+
+      .logo-item img {
+        max-height: 80px;
+      }
+    }
+  </style>
+</section>
 
 
 
