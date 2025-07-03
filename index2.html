@@ -1,0 +1,618 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Shantanu Parmar - Academic Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        /* General Reset and Academic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #f5f6f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Horizontal Navigation Bar */
+        nav {
+            background-color: #003087;
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #a3bffa;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 20px;
+            padding: 20px;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            color: #003087;
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #a3bffa;
+            padding-bottom: 5px;
+        }
+
+        /* Intro Section */
+        #intro .inner {
+            text-align: center;
+        }
+
+        #intro h1 {
+            font-size: 36px;
+            color: #003087;
+            margin-bottom: 10px;
+        }
+
+        /* About Section */
+        #abt .inner {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        #abt img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        #abt p {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+            flex: 1;
+        }
+
+        /* Education Dropdown */
+        ul.dropdown {
+            list-style: none;
+        }
+
+        ul.dropdown li {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+
+        ul.dropdown li:hover {
+            background-color: #e0e7ff;
+        }
+
+        ul.submenu {
+            display: none;
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        ul.submenu li {
+            background-color: #f9f9f9;
+            padding: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 2px;
+            border-radius: 4px;
+        }
+
+        /* Research and Projects Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .grid-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item img {
+            max-width: 180px;
+            height: 120px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .grid-item p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .grid-item a {
+            color: #003087;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .grid-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Associations */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .logo-item, .logo-item3 {
+            text-align: center;
+        }
+
+        .logo-item img, .logo-item3 img {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-item img:hover, .logo-item3 img:hover {
+            transform: scale(1.1);
+        }
+
+        .logo-item p, .logo-item3 p {
+            font-size: 14px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* Hobbies */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .photo-item {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Contact */
+        .contact {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .contact li h3 {
+            color: #003087;
+            margin-bottom: 10px;
+        }
+
+        .contact li a, .contact li span {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact li a:hover {
+            text-decoration: underline;
+        }
+
+        .icons a {
+            color: #003087;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003087;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+ទ
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer a {
+            color: #a3bffa;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            #abt .inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .grid-container, .photo-grid, .logo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#abt">About</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#work">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#outreach">Outreach</a></li>
+            <li><a href="#associations">Associations</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Intro -->
+        <section id="intro">
+            <div class="inner">
+                <h1>Shantanu Parmar</h1>
+                <p>Undergraduate Researcher in Astrophysics, Machine Learning, and VLSI</p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="abt">
+            <div class="inner">
+                <img src="images/me.jpg" alt="Shantanu Parmar">
+                <div>
+                    <h2>About</h2>
+                    <p>
+                        My name is Shantanu Parmar, and I am an undergraduate Engineering student pursuing a Bachelor's in Technology in Information and Communication Technology at Marwadi University. I am an American Physical Society Matching Membership Fellow and a member of the Inspired 24 Space Initiative. My research interests lie at the intersection of Astrophysics, Machine Learning, and VLSI. In my free time, I enjoy astrophotography, hiking, and building electronics projects.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="Education">
+            <div class="inner">
+                <h2>Education</h2>
+                <ul class="dropdown">
+                    <li onclick="toggleSubmenu('marwadi-university')">
+                        <img src="images/mwi.jpg" alt="Marwadi University" height="70" width="100"> Marwadi University
+                    </li>
+                    <ul id="marwadi-university" class="submenu">
+                        <li><strong>Duration:</strong> September 2022 - May 2026</li>
+                        <li><strong>Semester 1:</strong> Analog Electronics, Operational Amplifiers, Foundation in Sensor Interfacing, C Programming, Advance Calculus</li>
+                        <li><strong>Semester 2:</strong> Digital Electronics and Digital Logic Design, Object-Oriented Programming and Core Java, CAD, Matrix and Vector Calculus</li>
+                        <li><strong>Semester 3:</strong> Computer Organization and Architecture, Data Structures with C++, Communication Engineering, Python Programming, Discrete Mathematics and Graph Theory, Signals and Systems, Industry 4.0</li>
+                        <li><strong>Semester 4:</strong> Microcontroller Interfacing, Web Development, Analog and Digital Communication, Operating Systems, Probability and Statistics, Database Management System</li>
+                        <li><strong>Semester 5:</strong> Digital Signal and Image Processing, Algorithm Design, Computer Networks, <b>Electives:</b> Machine Learning, VLSI Design</li>
+                        <li><strong>Semester 6:</strong> Optimization Technique, Software Engineering, Artificial Intelligence, Human Centered Design, <b>Electives:</b> Computer Vision, Deep Learning</li>
+                        <li><strong>Website:</strong> <a href="https://www.marwadiuniversity.ac.in/" target="_blank" rel="noopener noreferrer">https://www.marwadiuniversity.ac.in/</a></li>
+                    </ul>
+                    <li onclick="toggleSubmenu('saint-pauls-school')">
+                        <img src="images/sps.jpg" alt="Saint Paul's School" height="70" width="100"> Saint Paul’s School, Rajkot
+                    </li>
+                    <ul id="saint-pauls-school" class="submenu">
+                        <li><strong>Grade:</strong> 3 to 10</li>
+                        <li><strong>Duration:</strong> June 2012 - March 2020</li>
+                        <li><strong>Coursework:</strong> Mathematics, Sciences (Physics, Chemistry, Biology), Humanities (Moral Science, History & Civics, Geography), World Languages (English, French), Visual Art, Performing Art, Community Service, Computer Applications, and Programming, Laboratory Sciences</li>
+                        <li><strong>Website:</strong> <a href="https://www.saintpaulsrajkot.org/" target="_blank" rel="noopener noreferrer">https://www.saintpaulsrajkot.org/</a></li>
+                    </ul>
+                    <li onclick="toggleSubmenu('bh-rathod-high-school')">
+                        B.H. Rathod High School, Rajkot, Gujarat
+                    </li>
+                    <ul id="bh-rathod-high-school" class="submenu">
+                        <li><strong>Grade:</strong> 11 to 12</li>
+                        <li><strong>Duration:</strong> May 2020 - May 2022</li>
+                        <li><strong>Coursework:</strong> Pre-Calculus, Advanced Mathematics, Laboratory Sciences (Physics and Chemistry), World Languages (English), Web Development, Java Applications</li>
+                    </ul>
+                </ul>
+            </div>
+            <script>
+                function toggleSubmenu(id) {
+                    var submenu = document.getElementById(id);
+                    if (submenu.style.display === "none" || submenu.style.display === "") {
+                        submenu.style.display = "block";
+                    } else {
+                        submenu.style.display = "none";
+                    }
+                }
+            </script>
+        </section>
+
+        <!-- Research -->
+        <section id="work">
+            <div class="inner">
+                <h2>Research</h2>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="images/mbtr.gif" alt="MBTR">
+                        <p>Deep Learning based vision powered Celestial object tracking on MobilTelesco Dataset</p>
+                        <a href="https://shantanu-parmar.github.io/MBTrdemo/" target="_blank">Demo</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/bkh.gif" alt="GW">
+                        <p>Omniformer context-aware Transformer with Meta-optimized Hypernetworks</p>
+                        <a href="https://github.com/Shantanu-Parmar/Omniformer/" target="_blank">Github</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/lidar.png" alt="Lidar">
+                        <p>Utilizing Lidar Sensing to quantify the complexities of Autonomous Driving Environments</p>
+                        <a href="https://github.com/Shantanu-Parmar/lidar/blob/083f7712ef48b47f8451092b3929e4b2a3c374c7/LidarPoster.pdf" target="_blank">Poster</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/vor.png" alt="Vor">
+                        <p>Voronoi Tessellation based sensor deployment algorithm for Forest Fire Early Detection</p>
+                        <a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.171561178.88456100" target="_blank">Reference</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <div class="inner">
+                <h2>Projects</h2>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="images/gweasy.png" alt="GWEASY">
+                        <p>GWeasy: No Code Gravitational Wave Data Analysis</p>
+                        <a href="https://github.com/Shantanu-Parmar/GWeasy" target="_blank">Github</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/mobil.png" alt="Project 1">
+                        <p>Mobil-Telesco: An Astrophotography aid</p>
+                        <a href="https://github.com/Shantanu-Parmar/MobilTelesco" target="_blank">Github</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/FFEDAS.png" alt="FFEDAS">
+                        <p>Forest Fire Early Detection and Alert System</p>
+                        <a href="https://drive.google.com/file/d/1kI9WK7QL4fjttObeYHD2ywoJUrjJU50w/view" target="_blank">Poster</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/sol.png" alt="Project 4">
+                        <p>SolarScope: A solar system simulator</p>
+                        <a href="https://Shantanu-Parmar.github.io/SolarModel/at2/beginner.html" target="_blank">Demo</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/agro2.png" alt="Project 5">
+                        <p>CropX: Automated Seeder Alert</p>
+                        <a href="https://www.instructables.com/Automated-Seeder-Alert-System/" target="_blank">Report</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/JavaX.png" alt="Project 6">
+                        <p>JavaX: Programming Languages Teaching Aid</p>
+                        <a href="https://github.com/Shantanu-Parmar/CX" target="_blank">Details</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/spms.png" alt="Project 3">
+                        <p>SPMS: Student Project Management System</p>
+                        <a href="https://Shantanu-Parmar.github.io/SPMS/src/index.html" target="_blank">Demo</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/rem.png" alt="Project 7">
+                        <p>Universal Projector Remote Standalone Module</p>
+                        <a href="https://www.instructables.com/Universal-Projector-Remote-Control/" target="_blank">Details</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/dart.png" alt="Project 8">
+                        <p>Digital Design EDART board</p>
+                        <a href="https://drive.google.com/file/d/1SGVEfEAM2E1SqOhNNuCPtn7fdoIbxQLK/view" target="_blank">Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outreach -->
+        <section id="outreach">
+            <div class="inner">
+                <h2>Outreach</h2>
+                <h3>Presentations</h3>
+                <ul class="link-list">
+                    <li>3 Minute Thesis on my research work at University of Alberta, Summer 2024 <a href="https://youtu.be/cq6iX2isRGI?feature=shared" target="_blank"><b>Watch</b></a></li>
+                    <li>Poster Presentation: Utilizing Lidar Sensing to quantify the complexities of Autonomous Driving Environments <a href="https://youtu.be/ZJfQ9lLIwu4?feature=shared" target="_blank"><b>Watch</b></a></li>
+                    <li>Research (Review) Presentation: Finding the origin of noise transients in LIGO data with machine learning <a href="https://youtu.be/AHohjfhf1SA?feature=shared" target="_blank"><b>Watch</b></a></li>
+                    <li>CMOS in Space: A study of need, development and future of CMOS chips in Astrophysics and Aerospace applications <a href="https://youtu.be/TGOuu1fu7ig?feature=shared" target="_blank"><b>Watch</b></a></li>
+                    <li>Research (Review) Presentation: Design of an Optical Photon Counting Array Receiver System for Deep-Space Communications <a href="https://youtu.be/FA2wTzQb3mQ?feature=shared" target="_blank"><b>Watch</b></a></li>
+                </ul>
+                <h3>Demos</h3>
+                <ul class="link-list">
+                    <li>GWeasy features run through <a href="https://youtu.be/WbjKwl0-VA0" target="_blank"><b>Watch</b></a></li>
+                    <li>CropX internship final project demo for smart Agriculture tool development <a href="https://youtu.be/4HdpIb3r6qQ" target="_blank"><b>Watch</b></a></li>
+                    <li>Web Interface tool for visualizing Hierarchical Bayesian Inference Models <a href="https://youtu.be/s98aWEHlVk4" target="_blank"><b>Watch</b></a></li>
+                    <li>Universal Projector Remote Control Demo <a href="https://youtu.be/r3gWq5gHimU" target="_blank"><b>Watch</b></a></li>
+                    <li>Car Battery Voltmeter Circuit Analysis <a href="https://youtu.be/12JzNSa8sSY" target="_blank"><b>Watch</b></a></li>
+                    <li>Analog Electronics: An overview <a href="https://youtu.be/xVHjPtb3rEc" target="_blank"><b>Watch</b></a></li>
+                    <li>JAVAX: A programming languages teaching aid <a href="https://youtu.be/12JzNSa8sSY" target="_blank"><b>Watch</b></a></li>
+                </ul>
+                <h3>Fun</h3>
+                <ul class="link-list">
+                    <li>The Bland Potato Debate <a href="https://youtu.be/zDvdRJ1b73E?feature=shared" target="_blank"><b>Watch</b></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Associations -->
+        <section id="associations">
+            <div class="inner">
+                <h2>Associations</h2>
+                <div class="logo-grid">
+                    <div class="logo-item">
+                        <a href="https://www.aps.org/" target="_blank"><img src="images/aps.svg" alt="APS Logo"></a>
+                        <p><b>Matching Membership Fellow<br>American Physical Society</b></p>
+                    </div>
+                    <div class="logo-item">
+                        <a href="https://www.lisamission.org/" target="_blank"><img src="images/lisa.png" alt="LISA Logo"></a>
+                        <p><b>Community Member<br>The Laser Interferometer Space Antenna</b></p>
+                    </div>
+                    <div class="logo-item">
+                        <a href="https://theinspired24.com/" target="_blank"><img src="images/i24.png" alt="Inspired24 Logo"></a>
+                        <p><b>Member<br>Inspired24: Space 4 all</b></p>
+                    </div>
+                    <div class="logo-item">
+                        <a href="https://habitableworldsobservatory.org/home" target="_blank"><img src="images/hwo.png" alt="HWO Logo"></a>
+                        <p><b>Member<br>Dark Matter Sub Working Group</b></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section id="hobbies">
+            <div class="inner">
+                <h2>Hobbies</h2>
+                <div class="photo-grid" id="photoGrid"></div>
+            </div>
+            <script>
+                const photoGrid = document.getElementById("photoGrid");
+                const images = [
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20241207-WA0007.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250115-WA0001.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0099.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0101.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0102.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0103.jpg"
+                ];
+
+                const gridSize = 6;
+                function shuffleArray(array) {
+                    for (let i = array.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [array[i], array[j]] = [array[j], array[i]];
+                    }
+                }
+
+                function populateGrid() {
+                    photoGrid.innerHTML = "";
+                    const selectedImages = images.slice(0, gridSize);
+                    selectedImages.forEach((imgSrc) => {
+                        const img = document.createElement("img");
+                        img.src = imgSrc;
+                        img.alt = "Hobby Photo";
+                        img.className = "photo-item";
+                        photoGrid.appendChild(img);
+                    });
+                }
+
+                shuffleArray(images);
+                populateGrid();
+                setInterval(() => {
+                    shuffleArray(images);
+                    populateGrid();
+                }, 5000);
+            </script>
+        </section>
+
+        <!-- Contact -->
+        <section id="Contact">
+            <div class="inner">
+                <h2>Contact</h2>
+                <p>Have questions about my work or interested in collaboration? Feel free to reach out.</p>
+                <p><a href="https://formsubmit.co/el/ruboga" target="_blank"><b>Send Message</b></a></p>
+                <ul class="contact">
+                    <li>
+                        <h3>Address</h3>
+                        <span>Pale Blue Dot, RA: 10h 45m 23.3s, Dec: -59° 50′ 33″<br>Local Bubble, Milky Way, Virgo,<br>Observable Universe</span>
+                    </li>
+                    <li>
+                        <h3>Email</h3>
+                        <a href="mailto:shantanu.c.parmar@gmail.com">shantanu.c.parmar@gmail.com</a>
+                    </li>
+                    <li>
+                        <h3>Phone</h3>
+                        <span>+91 7575010070</span>
+                    </li>
+                    <li>
+                        <h3>Social</h3>
+                        <ul class="icons">
+                            <li><a href="https://x.com/AmazingShan909" class="fab fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://www.youtube.com/@explorare_infinitas" class="fab fa-youtube"><span class="label">Youtube</span></a></li>
+                            <li><a href="https://github.com/Shantanu-Parmar" class="fab fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/shantanuparmar/" class="fab fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="inner">
+            <ul class="menu">
+                <li>© Shantanu Parmar. All rights reserved.</li>
+                <li>Design inspired by <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
