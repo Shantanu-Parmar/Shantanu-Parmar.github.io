@@ -1,0 +1,80 @@
+<div id="main">
+    <section id="Education">
+        <h2>Education</h2>
+        <ul class="dropdown">
+            <li onclick="toggleSubmenu('marwadi-university')">
+                <img src="images/mwi.jpg" alt="Marwadi University" height="50" width="70"> Marwadi University
+            </li>
+            <ul id="marwadi-university" class="submenu" style="display: none;">
+                <li><strong>Duration:</strong> September 2022 - May 2026</li>
+                <li><strong>Semester 1:</strong> Analog Electronics, Operational Amplifiers, Foundation in Sensor Interfacing, C Programming, Advance Calculus</li>
+                <li><strong>Semester 2:</strong> Digital Electronics and Digital Logic Design, Object-Oriented Programming and Core Java, CAD, Matrix and Vector Calculus</li>
+                <li><strong>Semester 3:</strong> Computer Organization and Architecture, Data Structures with C++, Communication Engineering, Python Programming, Discrete Mathematics and Graph Theory, Signals and Systems, Industry 4.0</li>
+                <li><strong>Semester 4:</strong> Microcontroller Interfacing, Web Development, Analog and Digital Communication, Operating Systems, Probability and Statistics, Database Management System</li>
+                <li><strong>Semester 5:</strong> Digital Signal and Image Processing, Algorithm Design, Computer Networks, <b>Electives:</b> Machine Learning, VLSI Design</li>
+                <li><strong>Semester 6:</strong> Optimization Technique, Software Engineering, Artificial Intelligence, Human Centered Design, <b>Electives:</b> Computer Vision, Deep Learning</li>
+                <li><strong>Website:</strong> <a href="https://www.marwadiuniversity.ac.in/" target="_blank" rel="noopener noreferrer">https://www.marwadiuniversity.ac.in/</a></li>
+            </ul>
+            <li onclick="toggleSubmenu('saint-pauls-school')">
+                <img src="images/sps.jpg" alt="Saint Paul's School" height="50" width="70"> Saint Paul’s School, Rajkot
+            </li>
+            <ul id="saint-pauls-school" class="submenu" style="display: none;">
+                <li><strong>Grade:</strong> 3 to 10</li>
+                <li><strong>Duration:</strong> June 2012 - March 2020</li>
+                <li><strong>Coursework:</strong> Mathematics, Sciences (Physics, Chemistry, Biology), Humanities (Moral Science, History & Civics, Geography), World Languages (English, French), Visual Art, Performing Art, Community Service, Computer Applications, and Programming, Laboratory Sciences</li>
+                <li><strong>Website:</strong> <a href="https://www.saintpaulsrajkot.org/" target="_blank" rel="noopener noreferrer">https://www.saintpaulsrajkot.org/</a></li>
+            </ul>
+            <li onclick="toggleSubmenu('bh-rathod-high-school')">
+                B.H. Rathod High School, Rajkot, Gujarat
+            </li>
+            <ul id="bh-rathod-high-school" class="submenu" style="display: none;">
+                <li><strong>Grade:</strong> 11 to 12</li>
+                <li><strong>Duration:</strong> May 2020 - May 2022</li>
+                <li><strong>Coursework:</strong> redact Pre-Calculus, Advanced Mathematics, Laboratory Sciences (Physics and Chemistry), World Languages (English), Web Development, Java Applications</li>
+            </ul>
+        </ul>
+        <script>
+            function toggleSubmenu(id) {
+                var submenu = document.getElementById(id);
+                if (submenu.style.display === "none" || submenu.style.display === "") {
+                    submenu.style.display = "block";
+                } else {
+                    submenu.style.display = "none";
+                }
+            }
+        </script>
+        <style>
+            ul.dropdown {
+                list-style: none;
+            }
+            ul.dropdown li {
+                cursor: pointer;
+                padding: 10px;
+                background-color: #f8f9fa;
+                border: 1px solid #dee2e6;
+                margin-bottom: 5px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+            }
+            ul.dropdown li img {
+                margin-right: 10px;
+            }
+            ul.dropdown li:hover {
+                background-color: #e9ecef;
+            }
+            ul.submenu {
+                list-style: none;
+                padding-left: 20px;
+                margin-top: 5px;
+            }
+            ul.submenu li {
+                background-color: #f8f9fa;
+                padding: 8px;
+                border: 1px solid #dee2e6;
+                margin-bottom: 2px;
+                border-radius: 4px;
+            }
+        </style>
+    </section>
+</div>
