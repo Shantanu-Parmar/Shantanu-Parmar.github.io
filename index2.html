@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <style>
-        /* General Reset and Monochromatic Background Styling */
+        /* General Reset and Sharp Black-and-White Background Styling */
         * {
             margin: 0;
             padding: 0;
@@ -15,26 +15,26 @@
 
         body {
             font-family: 'Times New Roman', Times, serif;
-            background-color: #f4f4f4;
-            color: #1a1a1a;
+            background-color: #FFFFFF;
+            color: #000000;
             line-height: 1.7;
             scroll-behavior: smooth;
             position: relative;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" opacity="0.05"><g fill="%23222222"><circle cx="100" cy="100" r="5"/><circle cx="800" cy="200" r="4"/><path d="M300,300 Q350,350 400,300" stroke="%23222222" stroke-width="2" fill="none"/><circle cx="600" cy="600" r="6"/><path d="M200,700 Q250,750 300,700" stroke="%23222222" stroke-width="2" fill="none"/><circle cx="900" cy="900" r="3"/></g></svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" opacity="0.05"><g fill="%23000000"><circle cx="100" cy="100" r="5"/><circle cx="800" cy="200" r="4"/><path d="M300,300 Q350,350 400,300" stroke="%23000000" stroke-width="2" fill="none"/><circle cx="600" cy="600" r="6"/><path d="M200,700 Q250,750 300,700" stroke="%23000000" stroke-width="2" fill="none"/><circle cx="900" cy="900" r="3"/></g></svg>');
             background-repeat: repeat;
             background-size: 1000px 1000px;
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background-color: #000000;
+            color: #FFFFFF;
             padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid #000000;
         }
 
         nav ul {
@@ -49,7 +49,7 @@
         }
 
         nav ul li a {
-            color: #ffffff;
+            color: #FFFFFF;
             text-decoration: none;
             font-size: 15px;
             font-weight: 500;
@@ -58,7 +58,7 @@
         }
 
         nav ul li a:hover {
-            color: #cccccc;
+            color: #CCCCCC;
         }
 
         /* Main Container */
@@ -70,18 +70,18 @@
 
         /* Section Styling */
         section {
-            background-color: #ffffff;
+            background-color: #FFFFFF;
             padding: 30px;
             margin-bottom: 25px;
-            border: 1px solid #d0d0d0;
-            border-radius: 4px;
+            border: 1px solid #000000;
+            border-radius: 0;
         }
 
         section h2 {
-            color: #1a1a1a;
+            color: #000000;
             font-size: 24px;
             margin-bottom: 15px;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #000000;
             padding-bottom: 6px;
             font-weight: 700;
         }
@@ -93,14 +93,14 @@
 
         #intro h1 {
             font-size: 36px;
-            color: #1a1a1a;
+            color: #000000;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
         #intro p {
             font-size: 16px;
-            color: #333;
+            color: #000000;
         }
 
         /* About Section */
@@ -116,8 +116,7 @@
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #666;
-            filter: grayscale(100%);
+            border: 1px solid #000000;
         }
 
         #abt p {
@@ -125,7 +124,7 @@
             line-height: 1.8;
             text-align: justify;
             flex: 1;
-            color: #222;
+            color: #000000;
         }
 
         /* Education Dropdown */
@@ -136,21 +135,22 @@
         ul.dropdown li {
             cursor: pointer;
             padding: 12px;
-            background-color: #f8f8f8;
-            border: 1px solid #d0d0d0;
+            background-color: #FFFFFF;
+            border: 1px solid #000000;
             margin-bottom: 6px;
-            border-radius: 4px;
+            border-radius: 0;
             display: flex;
             align-items: center;
             gap: 12px;
         }
 
         ul.dropdown li:hover {
-            background-color: #e8e8e8;
+            background-color: #F0F0F0;
         }
 
         ul.dropdown li img {
-            filter: grayscale(100%);
+            height: 70px;
+            width: 100px;
         }
 
         ul.submenu {
@@ -161,11 +161,11 @@
         }
 
         ul.submenu li {
-            background-color: #f8f8f8;
+            background-color: #FFFFFF;
             padding: 8px;
-            border: 1px solid #d0d0d0;
+            border: 1px solid #000000;
             margin-bottom: 4px;
-            border-radius: 4px;
+            border-radius: 0;
             font-size: 14px;
         }
 
@@ -178,30 +178,29 @@
         }
 
         .grid-item {
-            background-color: #f8f8f8;
+            background-color: #FFFFFF;
             padding: 15px;
-            border: 1px solid #d0d0d0;
-            border-radius: 4px;
+            border: 1px solid #000000;
+            border-radius: 0;
             text-align: center;
         }
 
         .grid-item img {
             max-width: 180px;
             height: 120px;
-            border-radius: 4px;
+            border-radius: 0;
             margin-bottom: 10px;
             object-fit: cover;
-            filter: grayscale(100%);
         }
 
         .grid-item p {
             font-size: 14px;
-            color: #222;
+            color: #000000;
             margin-bottom: 10px;
         }
 
         .grid-item a {
-            color: #1a1a1a;
+            color: #0047AB;
             text-decoration: none;
             font-weight: 600;
             font-size: 13px;
@@ -209,7 +208,7 @@
 
         .grid-item a:hover {
             text-decoration: underline;
-            color: #555;
+            color: #003087;
         }
 
         /* Associations */
@@ -227,12 +226,11 @@
         .logo-item img, .logo-item3 img {
             width: 150px;
             height: auto;
-            filter: grayscale(100%);
         }
 
         .logo-item p, .logo-item3 p {
             font-size: 14px;
-            color: #222;
+            color: #000000;
             margin-top: 10px;
             font-weight: 500;
         }
@@ -248,7 +246,8 @@
             width: 150px;
             height: 200px;
             object-fit: cover;
-            border-radius: 4px;
+            border-radius: 0;
+            border: 1px solid #000000;
             transition: transform 0.3s ease, z-index 0.3s ease;
             position: relative;
             z-index: 1;
@@ -268,41 +267,41 @@
         }
 
         .contact li h3 {
-            color: #1a1a1a;
+            color: #000000;
             margin-bottom: 10px;
             font-size: 16px;
             font-weight: 700;
         }
 
         .contact li a, .contact li span {
-            color: #222;
+            color: #000000;
             text-decoration: none;
             font-size: 14px;
         }
 
         .contact li a:hover {
-            color: #555;
+            color: #0047AB;
             text-decoration: underline;
         }
 
         .icons a {
-            color: #1a1a1a;
+            color: #000000;
             margin-right: 12px;
             font-size: 18px;
         }
 
         .icons a:hover {
-            color: #555;
+            color: #0047AB;
         }
 
         /* Footer */
         footer {
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background-color: #000000;
+            color: #FFFFFF;
             text-align: center;
             padding: 15px 0;
             margin-top: 30px;
-            border-top: 1px solid #444;
+            border-top: 1px solid #000000;
         }
 
         footer ul {
@@ -314,7 +313,7 @@
         }
 
         footer a {
-            color: #cccccc;
+            color: #CCCCCC;
             text-decoration: none;
             font-size: 13px;
             font-weight: 500;
@@ -322,6 +321,7 @@
 
         footer a:hover {
             text-decoration: underline;
+            color: #FFFFFF;
         }
 
         /* Responsive Design */
