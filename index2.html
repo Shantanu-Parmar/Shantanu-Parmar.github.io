@@ -643,66 +643,66 @@
                 <h2>Shan in the Wild</h2>
                 <div class="photo-grid" id="photoGrid"></div>
             </div>
-            <script>
-                const photoGrid = document.getElementById("photoGrid");
-                const images = [
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20241207-WA0007.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250115-WA0001.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0099.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0101.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0102.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0103.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0104.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0105.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0106.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0109.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0110.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0112.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0113.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0114.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0115.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0116.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/bike-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/end-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/lake-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meincanyon-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwater-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwild-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menearwater-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menexttowater-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/museo-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/road-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele1-min.jpg",
-                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele2-min.jpg"
-                ];
+<script>
+    const photoGrid = document.getElementById("photoGrid");
 
-                const gridSize = 7;
-                function shuffleArray(array) {
-                    for (let i = array.length - 1; i > 0; i--) {
-                        const j = Math.floor(Math.random() * (i + 1));
-                        [array[i], array[j]] = [array[j], array[i]];
-                    }
-                }
+    const images = [
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20241207-WA0007.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250115-WA0001.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0099.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0101.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0102.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0103.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0104.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0105.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0106.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0109.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0110.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0112.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0113.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0114.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0115.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0116.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/bike-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/end-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/lake-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meincanyon-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwater-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwild-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menearwater-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menexttowater-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/museo-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/road-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele1-min.jpg",
+        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele2-min.jpg"
+    ];
 
-                function populateGrid() {
-                    photoGrid.innerHTML = "";
-                    const selectedImages = images.slice(0, gridSize);
-                    selectedImages.forEach((imgSrc) => {
-                        const img = document.createElement("img");
-                        img.src = imgSrc;
-                        img.alt = "Hobby Photo";
-                        img.className = "photo-item";
-                        photoGrid.appendChild(img);
-                    });
-                }
+    const gridSize = 7;
+    let currentIndex = 0;
+    const imgElements = [];
 
-                shuffleArray(images);
-                populateGrid();
-                setInterval(() => {
-                    shuffleArray(images);
-                    populateGrid();
-                }, 3000);
-            </script>
+    // Create and insert static image elements
+    for (let i = 0; i < gridSize; i++) {
+        const img = document.createElement("img");
+        img.className = "photo-item";
+        img.alt = "Hobby Photo";
+        photoGrid.appendChild(img);
+        imgElements.push(img);
+    }
+
+    // Populate image sources
+    function updateGrid() {
+        for (let i = 0; i < gridSize; i++) {
+            const imgIndex = (currentIndex + i) % images.length;
+            imgElements[i].src = images[imgIndex];
+        }
+        currentIndex = (currentIndex + gridSize) % images.length;
+    }
+
+    updateGrid(); // Initial load
+    setInterval(updateGrid, 5000); // Update every 5 seconds
+</script>
+
         </section>
 
         <!-- Contact -->
