@@ -237,9 +237,11 @@
 
         /* Hobbies */
         .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            overflow-x: auto;
+            padding-bottom: 10px;
         }
 
         .photo-item {
@@ -251,6 +253,7 @@
             transition: transform 0.3s ease, z-index 0.3s ease;
             position: relative;
             z-index: 1;
+            flex-shrink: 0;
         }
 
         .photo-item:hover {
@@ -342,6 +345,11 @@
 
             .grid-container, .photo-grid, .logo-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .photo-grid {
+                flex-direction: row;
+                overflow-x: auto;
             }
 
             section {
@@ -488,7 +496,7 @@
                         <a href="https://github.com/Shantanu-Parmar/Omniformer/" target="_blank">Github</a>
                     </div>
                     <div class="grid-item">
-                        <img src="images/lidar.png" alt="Lidar">
+                        <img src="images/lidar.gif" alt="Lidar">
                         <p>Utilizing Lidar Sensing to quantify the complexities of Autonomous Driving Environments</p>
                         <a href="https://github.com/Shantanu-Parmar/lidar/blob/083f7712ef48b47f8451092b3929e4b2a3c374c7/LidarPoster.pdf" target="_blank">Poster</a>
                     </div>
