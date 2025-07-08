@@ -13,11 +13,15 @@
             box-sizing: border-box;
         }
 
-       html {
+        html {
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            background-color: #FFFFFF;
+            background-image: url('https://raw.githubusercontent.com/Shantanu-Parmar/Shantanu-Parmar.github.io/ff69d9cd742e639667b9c7c924a69a395768592d/background.svg');
+            background-attachment: fixed;
         }
-        
+
         body {
             font-family: 'Times New Roman', Times, serif;
             color: #000000;
@@ -26,15 +30,12 @@
             position: relative;
             margin: 0;
             padding: 0;
-            background-color: #FFFFFF;
-            background-image: url('https://raw.githubusercontent.com/Shantanu-Parmar/Shantanu-Parmar.github.io/ff69d9cd742e639667b9c7c924a69a395768592d/background.svg');
-            background-attachment: fixed;
-            
+            min-height: 100vh;
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #000000;
+            background: linear-gradient(90deg, #000000 0%, #1a1a1a 100%);
             color: #FFFFFF;
             padding: 15px 0;
             position: fixed;
@@ -42,6 +43,7 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #000000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         nav ul {
@@ -52,15 +54,15 @@
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 0 25px;
         }
 
         nav ul li a {
             color: #FFFFFF;
             text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
             transition: color 0.3s ease;
         }
 
@@ -77,11 +79,12 @@
 
         /* Section Styling */
         section {
-            background-color: #FFFFFF;
+            background-color: #E0E4E7; /* Light metallic grey */
             padding: 30px;
             margin-bottom: 25px;
             border: 1px solid #000000;
             border-radius: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle sheen */
         }
 
         section h2 {
@@ -114,6 +117,7 @@
         #abt .inner {
             display: flex;
             align-items: center;
+            justify-content: center; /* Center the image */
             gap: 30px;
             flex-wrap: wrap;
         }
@@ -142,17 +146,18 @@
         ul.dropdown li {
             cursor: pointer;
             padding: 12px;
-            background-color: #FFFFFF;
+            background-color: #E0E4E7; /* Metallic grey */
             border: 1px solid #000000;
             margin-bottom: 6px;
             border-radius: 0;
             display: flex;
             align-items: center;
             gap: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         ul.dropdown li:hover {
-            background-color: #F0F0F0;
+            background-color: #D0D4D7; /* Slightly darker on hover */
         }
 
         ul.dropdown li img {
@@ -168,12 +173,13 @@
         }
 
         ul.submenu li {
-            background-color: #FFFFFF;
+            background-color: #E0E4E7; /* Metallic grey */
             padding: 8px;
             border: 1px solid #000000;
             margin-bottom: 4px;
             border-radius: 0;
             font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         /* Research and Projects Grid */
@@ -185,16 +191,17 @@
         }
 
         .grid-item {
-            background-color: #FFFFFF;
+            background-color: #E0E4E7; /* Metallic grey */
             padding: 15px;
             border: 1px solid #000000;
             border-radius: 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .grid-item img {
-            max-width: 180px;
-            height: 120px;
+            max-width: 220px; /* Bigger images */
+            height: 150px;
             border-radius: 0;
             margin-bottom: 10px;
             object-fit: cover;
@@ -224,6 +231,7 @@
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 20px;
             justify-items: center;
+            align-items: center; /* Dynamic alignment */
         }
 
         .logo-item, .logo-item3 {
@@ -274,6 +282,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
+        }
+
+        .contact li {
+            background-color: #E0E4E7; /* Metallic grey */
+            padding: 15px;
+            border: 1px solid #000000;
+            border-radius: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .contact li h3 {
@@ -332,6 +348,44 @@
         footer a:hover {
             text-decoration: underline;
             color: #FFFFFF;
+        }
+
+        /* Outreach Enhancements */
+        .link-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .link-list li {
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .link-list li a {
+            color: #0047AB;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link-list li a:hover {
+            text-decoration: underline;
+        }
+
+        .video-preview {
+            display: none;
+            position: absolute;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            height: 135px;
+            background: #000;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .link-list li:hover .video-preview {
+            display: block;
         }
 
         /* Responsive Design */
@@ -393,8 +447,8 @@
             }
 
             .grid-item img {
-                max-width: 150px;
-                height: 100px;
+                max-width: 180px;
+                height: 120px;
             }
 
             .photo-item {
@@ -431,7 +485,7 @@
         <section id="intro">
             <div class="inner">
                 <h1>Shantanu Parmar</h1>
-                <p>Undergraduate Researcher in Astrophysics, Machine Learning, and VLSI</p>
+                <p>Innovative Undergraduate Researcher in Astrophysics, Machine Learning, and VLSI</p>
             </div>
         </section>
 
@@ -586,25 +640,103 @@
                 <h2>Outreach</h2>
                 <h3>Presentations</h3>
                 <ul class="link-list">
-                    <li>3 Minute Thesis on my research work at University of Alberta, Summer 2024 <a href="https://youtu.be/cq6iX2isRGI?feature=shared" target="_blank"><b>Watch</b></a></li>
-                    <li>Poster Presentation: Utilizing Lidar Sensing to quantify the complexities of Autonomous Driving Environments <a href="https://youtu.be/ZJfQ9lLIwu4?feature=shared" target="_blank"><b>Watch</b></a></li>
-                    <li>Research (Review) Presentation: Finding the origin of noise transients in LIGO data with machine learning <a href="https://youtu.be/AHohjfhf1SA?feature=shared" target="_blank"><b>Watch</b></a></li>
-                    <li>CMOS in Space: A study of need, development and future of CMOS chips in Astrophysics and Aerospace applications <a href="https://youtu.be/TGOuu1fu7ig?feature=shared" target="_blank"><b>Watch</b></a></li>
-                    <li>Research (Review) Presentation: Design of an Optical Photon Counting Array Receiver System for Deep-Space Communications <a href="https://youtu.be/FA2wTzQb3mQ?feature=shared" target="_blank"><b>Watch</b></a></li>
+                    <li>3 Minute Thesis on my research work at University of Alberta, Summer 2024 <a href="https://youtu.be/cq6iX2isRGI?feature=shared" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/cq6iX2isRGI?feature=shared" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>Poster Presentation: Utilizing Lidar Sensing to quantify the complexities of Autonomous Driving Environments <a href="https://youtu.be/ZJfQ9lLIwu4?feature=shared" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/ZJfQ9lLIwu4?feature=shared" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>Research (Review) Presentation: Finding the origin of noise transients in LIGO data with machine learning <a href="https://youtu.be/AHohjfhf1SA?feature=shared" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/AHohjfhf1SA?feature=shared" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>CMOS in Space: A study of need, development and future of CMOS chips in Astrophysics and Aerospace applications <a href="https://youtu.be/TGOuu1fu7ig?feature=shared" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/TGOuu1fu7ig?feature=shared" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>Research (Review) Presentation: Design of an Optical Photon Counting Array Receiver System for Deep-Space Communications <a href="https://youtu.be/FA2wTzQb3mQ?feature=shared" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/FA2wTzQb3mQ?feature=shared" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
                 </ul>
                 <h3>Demos</h3>
                 <ul class="link-list">
-                    <li>GWeasy features run through <a href="https://youtu.be/WbjKwl0-VA0" target="_blank"><b>Watch</b></a></li>
-                    <li>CropX internship final project demo for smart Agriculture tool development <a href="https://youtu.be/4HdpIb3r6qQ" target="_blank"><b>Watch</b></a></li>
-                    <li>Web Interface tool for visualizing Hierarchical Bayesian Inference Models <a href="https://youtu.be/s98aWEHlVk4" target="_blank"><b>Watch</b></a></li>
-                    <li>Universal Projector Remote Control Demo <a href="https://youtu.be/r3gWq5gHimU" target="_blank"><b>Watch</b></a></li>
-                    <li>Car Battery Voltmeter Circuit Analysis <a href="https://youtu.be/12JzNSa8sSY" target="_blank"><b>Watch</b></a></li>
-                    <li>Analog Electronics: An overview <a href="https://youtu.be/xVHjPtb3rEc" target="_blank"><b>Watch</b></a></li>
-                    <li>JAVAX: A programming languages teaching aid <a href="https://youtu.be/12JzNSa8sSY" target="_blank"><b>Watch</b></a></li>
+                    <li>GWeasy features run through <a href="https://youtu.be/WbjKwl0-VA0" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/WbjKwl0-VA0" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>CropX internship final project demo for smart Agriculture tool development <a href="https://youtu.be/4HdpIb3r6qQ" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/4HdpIb3r6qQ" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>Web Interface tool for visualizing Hierarchical Bayesian Inference Models <a href="https://youtu.be/s98aWEHlVk4" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/s98aWEHlVk4" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>Universal Projector Remote Control Demo <a href="https://youtu.be/r3gWq5gHimU" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/r3gWq5gHimU" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>Car Battery Voltmeter Circuit Analysis <a href="https://youtu.be/12JzNSa8sSY" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/12JzNSa8sSY" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>Analog Electronics: An overview <a href="https://youtu.be/xVHjPtb3rEc" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/xVHjPtb3rEc" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
+                    <li>JAVAX: A programming languages teaching aid <a href="https://youtu.be/12JzNSa8sSY" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/12JzNSa8sSY" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
                 </ul>
                 <h3>Fun</h3>
                 <ul class="link-list">
-                    <li>The Bland Potato Debate <a href="https://youtu.be/zDvdRJ1b73E?feature=shared" target="_blank"><b>Watch</b></a></li>
+                    <li>The Bland Potato Debate <a href="https://youtu.be/zDvdRJ1b73E?feature=shared" target="_blank"><b>Watch</b></a>
+                        <div class="video-preview">
+                            <video width="240" height="135" preload="none" muted>
+                                <source src="https://youtu.be/zDvdRJ1b73E?feature=shared" type="video/mp4">
+                            </video>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -640,66 +772,69 @@
                 <h2>Shan in the Wild</h2>
                 <div class="photo-grid" id="photoGrid"></div>
             </div>
-<script>
-    const photoGrid = document.getElementById("photoGrid");
+            <script>
+                const photoGrid = document.getElementById("photoGrid");
 
-    const images = [
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20241207-WA0007.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250115-WA0001.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0099.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0101.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0102.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0103.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0104.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0105.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0106.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0109.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0110.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0112.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0113.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0114.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0115.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0116.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/bike-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/end-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/lake-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meincanyon-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwater-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwild-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menearwater-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menexttowater-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/museo-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/road-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele1-min.jpg",
-        "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele2-min.jpg"
-    ];
+                const images = [
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20241207-WA0007.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250115-WA0001.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0099.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0101.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0102.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0103.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0104.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0105.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0106.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0109.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0110.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0112.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0113.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0114.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0115.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/IMG-20250201-WA0116.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/bike-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/end-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/lake-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meincanyon-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwater-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/meinwild-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menearwater-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/menexttowater-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/museo-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/road-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele1-min.jpg",
+                    "https://raw.githubusercontent.com/Shantanu909/Shantanu.Parmar/ee06c9f7f8e47e0226b9630fc891d20bbb6f1076/images/Hobbies/tele2-min.jpg"
+                ];
 
-    const gridSize = 7;
-    let currentIndex = 0;
-    const imgElements = [];
+                const gridSize = 7;
+                let currentIndex = 0;
+                const imgElements = [];
 
-    // Create and insert static image elements
-    for (let i = 0; i < gridSize; i++) {
-        const img = document.createElement("img");
-        img.className = "photo-item";
-        img.alt = "Hobby Photo";
-        photoGrid.appendChild(img);
-        imgElements.push(img);
-    }
+                // Create and insert static image elements with virtual DOM optimization
+                function createImageElements() {
+                    for (let i = 0; i < gridSize; i++) {
+                        const img = document.createElement("img");
+                        img.className = "photo-item";
+                        img.alt = "Hobby Photo";
+                        photoGrid.appendChild(img);
+                        imgElements.push(img);
+                    }
+                }
 
-    // Populate image sources
-    function updateGrid() {
-        for (let i = 0; i < gridSize; i++) {
-            const imgIndex = (currentIndex + i) % images.length;
-            imgElements[i].src = images[imgIndex];
-        }
-        currentIndex = (currentIndex + gridSize) % images.length;
-    }
+                function updateGrid() {
+                    requestAnimationFrame(() => {
+                        for (let i = 0; i < gridSize; i++) {
+                            const imgIndex = (currentIndex + i) % images.length;
+                            imgElements[i].src = images[imgIndex];
+                        }
+                        currentIndex = (currentIndex + gridSize) % images.length;
+                    });
+                }
 
-    updateGrid(); // Initial load
-    setInterval(updateGrid, 5000); // Update every 5 seconds
-</script>
-
+                createImageElements();
+                updateGrid(); // Initial load
+                setInterval(updateGrid, 5000); // Update every 5 seconds
+            </script>
         </section>
 
         <!-- Contact -->
@@ -724,10 +859,10 @@
                     <li>
                         <h3>Social</h3>
                         <ul class="icons">
-                            <li><a href="https://x.com/AmazingShan909" class="fab fa-twitter"><span class="label">Twitter</span></a></li>
-                            <li><a href="https://www.youtube.com/@explorare_infinitas" class="fab fa-youtube"><span class="label">Youtube</span></a></li>
-                            <li><a href="https://github.com/Shantanu-Parmar" class="fab fa-github"><span class="label">GitHub</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/shantanuparmar/" class="fab fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://fictional.twitter.com/AmazingShan909" class="fab fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://fictional.youtube.com/@explorare_infinitas" class="fab fa-youtube"><span class="label">Youtube</span></a></li>
+                            <li><a href="https://fictional.github.com/Shantanu-Parmar" class="fab fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://fictional.linkedin.com/in/shantanuparmar/" class="fab fa-linkedin"><span class="label">LinkedIn</span></a></li>
                         </ul>
                     </li>
                 </ul>
