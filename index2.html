@@ -679,7 +679,7 @@
                 <h3>Demos</h3>
                 <ul class="link-list">
                     <li>GWeasy features run through <a href="https://youtu.be/WbjKwl0-VA0" target="_blank"><b>Watch</b></a>
-                        <div class="video-preview">
+<!--                         <div class="video-preview">
 <!--                             <video width="240" height="135" preload="none" muted>
                                 <source src="https://youtu.be/WbjKwl0-VA0" type="video/mp4">
                             </video> -->
@@ -689,7 +689,40 @@
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
 </iframe>
-                        </div>
+                        </div> -->
+            <div style="width: 240px; height: 135px; overflow: hidden;">
+    <iframe id="yt-player" 
+        width="240" height="135" 
+        src="https://www.youtube.com/embed/WbjKwl0-VA0?enablejsapi=1&mute=1"
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+<script>
+    const iframe = document.getElementById('yt-player');
+    let player;
+
+    // Load YouTube API
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('yt-player');
+    }
+
+    // Inject the YouTube Iframe API script
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    // Hover events
+    iframe.parentElement.addEventListener('mouseenter', () => {
+        if (player && player.playVideo) player.playVideo();
+    });
+
+    iframe.parentElement.addEventListener('mouseleave', () => {
+        if (player && player.pauseVideo) player.pauseVideo();
+    });
+</script>
                     </li>
                     <li>CropX internship final project demo for smart Agriculture tool development <a href="https://youtu.be/4HdpIb3r6qQ" target="_blank"><b>Watch</b></a>
                         <div class="video-preview">
