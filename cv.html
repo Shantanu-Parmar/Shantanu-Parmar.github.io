@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Shantanu Parmar - CV</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        /* === SAME STYLES AS index.html === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html {
+            min-height: 100vh;
+            background-color: #FFFFFF;
+            background-image: url('https://raw.githubusercontent.com/Shantanu-Parmar/Shantanu-Parmar.github.io/ff69d9cd742e639667b9c7c924a69a395768592d/background.svg');
+            background-attachment: fixed;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            color: #000000;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+            margin: 0; padding: 0; min-height: 100vh;
+        }
+        nav {
+            background: linear-gradient(90deg, #000000 0%, #1a1a1a 100%);
+            color: #FFFFFF; padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000;
+            border-bottom: 1px solid #000000; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav ul { display: flex; justify-content: center; list-style: none; padding: 0; }
+        nav ul li { margin: 0 25px; }
+        nav ul li a { color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 600; letter-spacing: 1px; transition: color 0.3s ease; }
+        nav ul li a:hover { color: #CCCCCC; }
+        .container { max-width: 1000px; margin: 90px auto 30px; padding: 0 20px; }
+        section { background-color: #E0E4E7; padding: 30px; margin-bottom: 25px; border: 1px solid #000000; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        h1 { font-size: 36px; text-align: center; margin-bottom: 10px; }
+        h2 { font-size: 24px; border-bottom: 1px solid #000; padding-bottom: 6px; margin: 25px 0 15px; }
+        h3 { font-size: 18px; margin: 18px 0 8px; font-weight: 700; }
+        p, ul { margin-bottom: 12px; font-size: 15px; }
+        ul { padding-left: 20px; }
+        .back-btn {
+            display: inline-block; background: #000; color: #FFF; padding: 10px 18px;
+            text-decoration: none; font-weight: 600; border-radius: 0; margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover { background: #333; }
+        .cv-section { margin-bottom: 30px; }
+        .date { font-style: italic; color: #444; font-size: 14px; }
+        @media (max-width: 768px) {
+            nav ul { flex-direction: column; text-align: center; }
+            nav ul li { margin: 10px 0; }
+            .container { margin-top: 120px; padding: 0 15px; }
+            h1 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#abt">About</a></li>
+            <li><a href="index.html#Education">Education</a></li>
+            <li><a href="index.html#work">Research</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#outreach">Outreach</a></li>
+            <li><a href="index.html#associations">Associations</a></li>
+            <li><a href="index.html#hobbies">Hobbies</a></li>
+            <li><a href="index.html#Contact">Contact</a></li>
+            <li><a href="cv.html" style="color: #00CCFF; font-weight: 700;">CV</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <!-- Back Button -->
+        <a href="index.html" class="back-btn">Back to Home</a>
+
+        <!-- CV Header -->
+        <section>
+            <h1>Shantanu Parmar</h1>
+            <p style="text-align:center; font-size:16px;">
+                Undergraduate Researcher | Astrophysics, Machine Learning, VLSI<br>
+                <a href="mailto:shantanu.c.parmar@gmail.com">shantanu.c.parmar@gmail.com</a> | 
+                <a href="https://linkedin.com/in/shantanuparmar/" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/Shantanu-Parmar" target="_blank">GitHub</a>
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section">
+            <h2>Education</h2>
+            <h3>B.Tech in Information and Communication Technology</h3>
+            <p><strong>Marwadi University, Rajkot, Gujarat</strong> <span class="date">Sep 2022 – May 2026 (Expected)</span></p>
+            <ul>
+                <li>CGPA: X.XX / 10.00 (as of Semester 6)</li>
+                <li>Relevant Coursework: Machine Learning, Computer Vision, Deep Learning, VLSI Design, Digital Signal Processing, Artificial Intelligence</li>
+            </ul>
+
+            <h3>Higher Secondary Certificate (HSC), Science Stream</h3>
+            <p><strong>B.H. Rathod High School, Rajkot</strong> <span class="date">2020 – 2022</span></p>
+            <ul>
+                <li>Percentage: XX% | Physics, Chemistry, Mathematics</li>
+            </ul>
+        </section>
+
+        <!-- Research Experience -->
+        <section class="cv-section">
+            <h2>Research Experience</h2>
+            <h3>Undergraduate Researcher</h3>
+            <p><strong>Marwadi University & Independent</strong> <span class="date">2023 – Present</span></p>
+            <ul>
+                <li>Published <strong>StrCGAN</strong> on arXiv: Generative framework for stellar image restoration using conditional GANs</li>
+                <li>Developed <strong>Omniformer</strong>: Context-aware transformer with meta-optimized hypernetworks for GW signal processing</li>
+                <li>Benchmarked object detection models on low-SNR astrophotography dataset (10k+ images, released on Zenodo)</li>
+                <li>Presented Lidar-based autonomous driving complexity metric at University of Alberta (3MT + Poster)</li>
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section class="cv-section">
+            <h2>Selected Projects</h2>
+            <ul>
+                <li><strong>GWeasy</strong>: No-code web tool for gravitational wave data analysis (50+ users in outreach)</li>
+                <li><strong>Mobil-Telesco</strong>: Mobile app aiding astrophotography alignment and tracking</li>
+                <li><strong>PhysAugNet</strong>: VQ-VAE-powered augmentation for industrial defect segmentation</li>
+                <li><strong>HETCalc</strong>: Web calculator for Hall Effect Thruster solenoid parameters</li>
+            </ul>
+        </section>
+
+        <!-- Skills -->
+        <section class="cv-section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> Python, C++, Java, MATLAB, Verilog</li>
+                <li><strong>ML/DL:</strong> PyTorch, TensorFlow, Scikit-learn, OpenCV, Astropy</li>
+                <li><strong>Tools:</strong> Git, Docker, Jupyter, LIGO GWpy, Altium, LTSpice</li>
+                <li><strong>Hardware:</strong> Arduino, Raspberry Pi, FPGA (Xilinx), Lidar, Telescope Control</li>
+            </ul>
+        </section>
+
+        <!-- Awards & Honors -->
+        <section class="cv-section">
+            <h2>Awards & Honors</h2>
+            <ul>
+                <li>American Physical Society Matching Membership Fellow (2024)</li>
+                <li>Inspired 24 Space Initiative Member</li>
+                <li>University of Alberta Summer Research Intern (2024)</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer style="background:#000;color:#FFF;text-align:center;padding:15px;margin-top:30px;">
+            © Shantanu Parmar. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
